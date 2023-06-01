@@ -10,16 +10,14 @@ const Navbar = () => {
   return (
     <div >
         <div className=' flex justify-between items-center px-5 border py-5'>
-            <div>
-                <div className={` ${searchOnclick == "on" ? "absolute top-5" : "hidden"}`}>
+                <div className={` ${searchOnclick == "on" ? "absolute top-5 sm:hidden" : "hidden"}`}>
                     <div className={` w-[200px] h-[50px] flex gap-3 border items-center rounded-lg bg-gray-100`}>
                         <AiOutlineSearch className=' text-gray-600 text-[25px] ml-3'></AiOutlineSearch>
                         <p className=' text-gray-400 text-sm '>Search</p>
                     </div>
                 </div>
-            </div>
 
-            <div className={` ${searchOnclick == "on" ? "hidden" : "block"} flex items-center gap-4`}>
+            <div className={` ${searchOnclick == "on" ? "hidden sm:flex" : "block"}  flex items-center gap-4`}>
                 <RxHamburgerMenu className=' text-2xl text-gray-600'></RxHamburgerMenu>
                 <div className=' flex items-center gap-4'>
                     <RiContactsBook2Fill className=' sm:block hidden text-[50px] text-blue-500'></RiContactsBook2Fill>
@@ -47,6 +45,8 @@ const Navbar = () => {
                 </div>
             </div>
         </div>
+
+
     </div>
   )
 }
